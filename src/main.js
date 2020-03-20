@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import './plugins/element.js'
+import '../node_modules/element-ui/lib/index.js'
 import axios from 'axios'
 Vue.prototype.$http = axios
 // 配置请求根路径
