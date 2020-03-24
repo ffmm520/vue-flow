@@ -8,15 +8,25 @@
             v-model="value1"
             type="date"
             placeholder="开始时间"
-            @change="handle"
+            @change="handle1"
             clearable
             align="center"
+            value-format="yyyy/MM/dd"
+            format="yyyy/MM/dd"
           ></el-date-picker>
         </el-col>
         <el-col :span="6">
-          <el-date-picker v-model="value2" type="date" placeholder="结束时间" @change="handle" clearable></el-date-picker>
+          <el-date-picker
+            v-model="value2"
+            type="date"
+            placeholder="结束时间"
+            @change="handle2"
+            clearable
+            value-format="yyyy/MM/dd"
+            format="yyyy/MM/dd"
+          ></el-date-picker>
         </el-col>
-      <!-- </el-row>
+        <!-- </el-row>
       <el-row> -->
         <el-col :span="6">1</el-col>
         <el-col :span="6">2</el-col>
@@ -24,14 +34,46 @@
       <el-row>
         <el-col :span="24">
           <el-table :data="tableData">
-            <el-table-column prop="date" label="日期" width="140"></el-table-column>
-            <el-table-column prop="name" label="姓名" width="120"></el-table-column>
-            <el-table-column prop="address" label="地址" width="150px"></el-table-column>
-            <el-table-column prop="address" label="地址" width="150px"></el-table-column>
-            <el-table-column prop="address" label="地址" width="150px"></el-table-column>
-            <el-table-column prop="address" label="地址" width="150px"></el-table-column>
-            <el-table-column prop="address" label="地址" width="150px"></el-table-column>
-            <el-table-column prop="address" label="地址" width="150px"></el-table-column>
+            <el-table-column
+              prop="date"
+              label="日期"
+              width="140"
+            ></el-table-column>
+            <el-table-column
+              prop="name"
+              label="姓名"
+              width="120"
+            ></el-table-column>
+            <el-table-column
+              prop="address"
+              label="地址"
+              width="150px"
+            ></el-table-column>
+            <el-table-column
+              prop="address"
+              label="地址"
+              width="150px"
+            ></el-table-column>
+            <el-table-column
+              prop="address"
+              label="地址"
+              width="150px"
+            ></el-table-column>
+            <el-table-column
+              prop="address"
+              label="地址"
+              width="150px"
+            ></el-table-column>
+            <el-table-column
+              prop="address"
+              label="地址"
+              width="150px"
+            ></el-table-column>
+            <el-table-column
+              prop="address"
+              label="地址"
+              width="150px"
+            ></el-table-column>
           </el-table>
         </el-col>
       </el-row>
@@ -94,8 +136,11 @@ export default {
     }
   },
   methods: {
-    handle() {
+    handle1() {
       console.log(this.value1)
+    },
+    handle2() {
+      console.log(this.value2)
     },
     handleSizeChange(val) {
       console.log(`每页 ${val} 条`)
@@ -109,7 +154,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@import url("//unpkg.com/element-ui@2.13.0/lib/theme-chalk/index.css");
+@import url('//unpkg.com/element-ui@2.13.0/lib/theme-chalk/index.css');
 h3 {
   margin: 40px 0 0;
 }
